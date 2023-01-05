@@ -1,0 +1,105 @@
+<app-header></app-header>
+<div class="page-title-area bg-10">
+  <div class="container">
+    <div class="page-title-content">
+      <h2>تفاصيل الخبر</h2>
+
+      <ul>
+        <li>
+          <a [routerLink]="['/home']"> الاستقبال </a>
+        </li>
+
+        <li class="active">{{ data.label }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Start Blog Details Area -->
+<section class="blog-details-area ptb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="blog-details-content">
+          <div class="blog-details-img">
+            <img src="{{ storageUrl }}{{ data.photo }}" alt="Image" />
+          </div>
+
+          <div class="blog-top-content">
+            <div class="news-content">
+              <ul class="admin">
+                <!-- <li>
+                  <a href="#">
+                    <i class="ri-user-fill"></i>
+                    Andrew lawson
+                  </a>
+                </li> -->
+
+                <li>
+                  <i class="ri-calendar-line"></i>
+                  {{ data.date }}
+                </li>
+
+                <!-- <li>
+                  <a href="#">
+                    <i class="ri-question-answer-fill"></i>
+                    (03) comments
+                  </a>
+                </li> -->
+              </ul>
+
+              <h3>{{ data.label }}</h3>
+
+              <p>
+                {{ data.details }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="widget-sidebar pl-15">
+          <div class="sidebar-widget search">
+            <form class="search-form">
+              <input
+                class="form-control"
+                name="search"
+                placeholder="البحث..."
+                type="text"
+              />
+              <button class="search-button" type="submit">
+                <i class="ri-search-line"></i>
+              </button>
+            </form>
+          </div>
+
+          <div class="sidebar-widget categories">
+            <h3>المزيد من الأخبار</h3>
+
+            <ul *ngFor="let n of news">
+              <li>
+                <a [routerLink]="['/newsdetails', n.id]">
+                  {{ n.label }}
+                  <i class="ri-arrow-right-s-line"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--
+          <div class="sidebar-widget advertizing">
+            <h3>Advertizing spot</h3>
+
+            <div class="advertizing-img">
+              <a href="#">
+                <img
+                  src="assets/images/blog-details/advertizing.jpg"
+                  alt="Image"
+                />
+              </a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Blog Details Area -->

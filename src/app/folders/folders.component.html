@@ -1,0 +1,93 @@
+<app-header></app-header>
+<div class="page-title-area-folder bg-20">
+  <div class="container">
+    <div class="page-title-content-folder">
+      <h2>تحميل الملفات</h2>
+
+      <ul>
+        <li class="active">يمكنك تحميل ملفك من هنا</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section class="book-area ptb-100">
+  <div class="container">
+    <div class="row">
+      <div class="book-action ptb-100">
+        <h2>حمل ملفك</h2>
+
+        <form (ngSubmit)="onSubmit(upload)" [formGroup]="upload">
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="label"
+                  placeholder="عنوان الملف"
+                  formControlName="label"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="الإسم"
+                  formControlName="name"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cin"
+                  placeholder="رقم بطاقة التعريف الوطنية"
+                  formControlName="cin"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <input
+                  type="file"
+                  name="chooseFile"
+                  id="chooseFile"
+                  formControlName="files"
+                  multiple
+                  (change)="onChange($event)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-group">
+              <textarea
+                name="message"
+                class="form-control"
+                id="details"
+                rows="6"
+                placeholder="التفاصيل"
+                formControlName="details"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="default-btn">ارسل</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Book Area -->

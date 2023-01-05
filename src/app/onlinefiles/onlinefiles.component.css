@@ -1,0 +1,20 @@
+
+.book-action-files {
+  background-color: #434260;
+  -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+  padding: 50px;
+  max-width: 930px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.book-action-files h3{
+color: #ffffff;
+}
+
+.book-action-files table{
+  color: #ffffff;
+}
+

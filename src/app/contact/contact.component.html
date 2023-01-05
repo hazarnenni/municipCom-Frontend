@@ -1,0 +1,136 @@
+<app-header></app-header>
+<div class="page-title-area bg-8">
+  <div class="container">
+    <div class="page-title-content">
+      <h2>Contact</h2>
+
+      <ul>
+        <li>
+          <a href="index.html"> الإستقبال </a>
+        </li>
+
+        <li class="active">الإتصال</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Start Contact Area -->
+<section class="main-contact-area pb-100">
+  <div class="container">
+    <div class="contact-bg">
+      <div class="contact-info">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="single-contact-info">
+              <h3>عنوان البلدية</h3>
+              <p>
+                <i class="ri-map-pin-fill"></i>
+                شارع الحبيب بورقيبة 5000, المنستير
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="single-contact-info">
+              <h3>الهاتف</h3>
+
+              <p>
+                <i class="ri-phone-fill"></i>
+                <a href="tel:+1-(514)-312-5678">271 461 73 </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="single-contact-info">
+              <h3>البريد الإلكتروني</h3>
+
+              <p>
+                <i class="ri-mail-open-fill"></i>
+                <a
+                  href="/cdn-cgi/l/email-protection#c5acaba3aa85b2acaeacabeba6aaa8"
+                  ><span
+                    class="__cf_email__"
+                    data-cfemail="e48d8a828ba4938d8f8d8aca878b89"
+                    >info.commune@commune-monastir.gov.tn</span
+                  ></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title white-title">
+        <h2>تواصل معنا</h2>
+        <!-- <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
+          eveniet quod mollitia asperiores ullam dolor corporis. vero nemo
+          consectetur
+        </p> -->
+      </div>
+
+      <form id="contactForm" (onSubmit)="insertData()">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6">
+            <div class="form-group">
+              <label>الإسم</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                required=""
+                data-error="Please enter your name"
+                [(ngModel)]="contact.name"
+              />
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-sm-6">
+            <div class="form-group">
+              <label>البريد الإلكتروني</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                required=""
+                data-error="Please enter your email"
+                [(ngModel)]="contact.email"
+              />
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-group">
+              <label>رسالتك </label>
+              <textarea
+                name="message"
+                id="message"
+                class="form-control"
+                cols="30"
+                rows="8"
+                required=""
+                data-error="Write your message"
+                [(ngModel)]="contact.message"
+              ></textarea>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 col-md-12">
+            <button type="submit" class="default-btn" (click)="insertData()">
+              إرسال
+            </button>
+            <div id="msgSubmit" class="h3 text-center hidden"></div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- End Contact Area -->

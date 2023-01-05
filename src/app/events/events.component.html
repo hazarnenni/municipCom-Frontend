@@ -1,0 +1,40 @@
+<!-- Start Events Area -->
+<section class="events-area pb-70">
+  <div class="container mt-30">
+    <div class="section-title">
+      <h2>أخر الأحداث</h2>
+      <p>أخر أحداث البلدية</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6" *ngFor="let e of events">
+        <div class="single-event-box">
+          <a href="event-details.html">
+            <img src="{{ storageUrl }}{{ e.photo }}" alt="Images" />
+          </a>
+
+          <div class="event-content">
+            <p><i class="ri-calendar-line"></i> {{ e.startDate }}</p>
+            <!-- <ul>
+              <li>
+                <i class="gmdi-date-range">{{ e.startDate }} </i>
+              </li>
+            </ul> -->
+            <h3>
+              <a>{{ e.title }}</a>
+            </h3>
+            <!-- <p>
+              <i class="ri-map-pin-2-line"></i> At City Center, 27 Division
+              Street, USA
+            </p> -->
+            <a class="read-more" [routerLink]="['/eventsdetails', e.id]">
+              اقرأ أكثر
+
+              <i class="ri-arrow-right-s-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

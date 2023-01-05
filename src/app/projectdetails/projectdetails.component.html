@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="page-title-area bg-20">
+  <div class="container">
+    <div class="page-title-content">
+      <h2>تفاصيل المشروع</h2>
+
+      <ul>
+        <li>
+          <a [routerLink]="['/home']"> الاستقبال </a>
+        </li>
+
+        <li class="active">{{ data.label }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<section class="project-details-area ptb-100">
+  <div class="container">
+    <div class="project-details-content">
+      <div class="services-content">
+        <img src="{{ storageUrl }}{{ data.photo }}" alt="Image" />
+      </div>
+
+      <div class="services-content">
+        <h3>{{ data.label }}</h3>
+
+        <p>
+          {{ data.details }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <app-vote></app-vote>
+</section>

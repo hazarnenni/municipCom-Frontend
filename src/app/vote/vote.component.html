@@ -1,0 +1,85 @@
+<section class="blog-details-area ptb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="blog-details-content">
+          <div class="blog-top-content">
+            <div class="leave-reply">
+              <h3>يمكنك التصويت من هنا</h3>
+
+              <form [formGroup]="voteproject" (ngSubmit)="send(voteproject)">
+                <p>
+                  لن يتم نشر عنوان بريدك الإلكتروني. الحقول المطلوبة تم وضع
+                  علامة
+                </p>
+                <div class="row">
+                  <div class="col-lg-6 col-sm-6">
+                    <div class="form-group">
+                      <label>الإسم*</label>
+                      <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        class="form-control"
+                        formControlName="email"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6 col-sm-6">
+                    <div class="form-group">
+                      <label>رقم الهوية*</label>
+                      <input
+                        type="cin"
+                        name="cin"
+                        id="cin"
+                        class="form-control"
+                        formControlName="cin"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                      <label>يمكنك التصويت من هنا</label>
+                      <select
+                        class="form-control"
+                        id="exampleFormControlSelect1"
+                        placeholder="q"
+                        formControlName="voting"
+                      >
+                        <option [ngValue]="0" disabled></option>
+                        <option [ngValue]="1">مع</option>
+                        <option [ngValue]="2">ضد</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                      <label>Your Message</label>
+                      <textarea
+                        name="message"
+                        class="form-control"
+                        id="message"
+                        rows="8"
+                        formControlName="reason"
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12 col-md-12">
+                    <button type="submit" class="default-btn">
+                      Send message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Project Details Area -->
+</section>

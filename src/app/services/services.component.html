@@ -1,0 +1,26 @@
+<!-- Start Services Area -->
+<section class="services-area services-area-style-two pt-100 pb-70">
+  <div class="container">
+    <div class="section-title">
+      <h2>الخدمات البلدية</h2>
+      <p>تضع بلدية المنستير جملة من الخدمات على ذمتكم</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6" *ngFor="let s of service">
+        <div class="single-services-box">
+          <span>
+            <img src="{{ storageUrl }}{{ s.logo }}" width="130" height="160" />
+          </span>
+
+          <h3>
+            <a [routerLink]="['/servicesdetail', s.id]">{{ s.title }}</a>
+          </h3>
+
+          <p>{{ s.subtitle }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Services Area -->

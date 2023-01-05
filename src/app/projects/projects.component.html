@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="page-title-area bg-20">
+  <div class="container">
+    <div class="page-title-content">
+      <h2>المشاريع</h2>
+
+      <ul>
+        <li>
+          <a [routerLink]="['/home']"> الاستقبال </a>
+        </li>
+
+        <li class="active">مشاريع</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section class="project-area pt-100 pb-70">
+  <div class="container">
+    <div class="section-title">
+      <h2>تعرف على مشاريع المدينة</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
+        eveniet quod mollitia asperiores ullam dolor corporis. vero nemo
+        consectetur
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6" *ngFor="let p of project">
+        <div class="single-project">
+          <img src="{{ storageUrl }}{{ p.photo }}" alt="Image" />
+
+          <div class="project-content">
+            <a [routerLink]="['/projectdetails', p.id]">{{ p.label }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Project Area -->
